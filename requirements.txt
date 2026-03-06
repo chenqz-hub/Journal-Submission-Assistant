@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-docx
+beautifulsoup4
+requests
+python-multipart
+jinja2
+pydantic
+openai
+pypandoc
+pdfminer.six
+python-dotenv
