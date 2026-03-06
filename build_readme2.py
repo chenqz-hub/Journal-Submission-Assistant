@@ -1,4 +1,5 @@
-# SciAutoFormat (科研投稿自动化排版与辅助工具 / AI Journal Submission Assistant)
+﻿import io
+readme_content = """# SciAutoFormat (科研投稿自动化排版与辅助工具 / AI Journal Submission Assistant)
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green)
@@ -55,14 +56,14 @@
 🇨🇳 工具支持部署到实验室的通用服务器或云服务器上，通过网络共享给课题组小伙伴：
 🇬🇧 You can also deploy this tool on lab or cloud servers to share with your research group:
 
-\\ash
+\\\ash
 git clone https://github.com/chenqz-hub/Journal-Submission-Assistant.git
 cd Journal-Submission-Assistant
 
 # 🇨🇳 1. 创建并激活虚拟环境
 # 🇬🇧 1. Create and activate virtual environment
 python -m venv venv
-# Windows: venv\Scripts\activate
+# Windows: venv\\Scripts\\activate
 # Linux/Mac: source venv/bin/activate
 
 # 🇨🇳 2. 安装依赖
@@ -77,7 +78,8 @@ nano .env
 # 🇨🇳 4. 启动服务 (生产环境推荐使用 systemd 或 supervisor)
 # 🇬🇧 4. Start the server (systemd or supervisor is recommended for production)
 uvicorn main:app --host 0.0.0.0 --port 8000
-\
+\\\
+
 ---
 
 ## 🔐 接口安全防御机制 / Security & Authorization
@@ -94,7 +96,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 
 ## 📁 目录结构与架构 / Project Structure
 
-\\	ext
+\\\	ext
 SciAutoFormat/
 ├── api/                # 🇨🇳 FastAPI 路由请求及校验中间件  | 🇬🇧 API routes and auth middleware
 ├── core/               # 🇨🇳 项目全局配置管理模块          | 🇬🇧 Global configurations
@@ -105,7 +107,8 @@ SciAutoFormat/
 ├── main.py             # 🇨🇳 FastAPI App 入口文件          | 🇬🇧 FastAPI entry point
 ├── requirements.txt    # 🇨🇳 核心依赖清单                  | 🇬🇧 Dependencies list
 └── start.bat           # 🇨🇳 Windows 批处理一键启动脚本    | 🇬🇧 Windows startup batch script
-\
+\\\
+
 ---
 
 ## 📄 授权协议 / License
@@ -113,3 +116,7 @@ SciAutoFormat/
 🇨🇳 本项目基于 **MIT License** 开源。欢迎各类前沿交叉学科的同学进行探索、Fork 并拓展为新的生产力工具！如果这个小项目能帮助到你们组顺利发表几篇 Top Journal，将是我们莫大的荣幸！
 
 🇬🇧 This project is licensed under the **MIT License**. We welcome researchers from all disciplines to explore, fork, and expand this tool! If this project helps your group publish a few Top Journals, it will be our greatest honor!
+"""
+
+with io.open('README.md', 'w', encoding='utf-8') as f:
+    f.write(readme_content)
